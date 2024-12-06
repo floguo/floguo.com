@@ -43,7 +43,7 @@ export function Header() {
             <div>
               <div className="text-xs text-gray-500 mb-1">CONTACT</div>
               <p className="text-sm">
-                Got an interesting idea? Please email me!
+                Have an interesting idea? Please get in touch :)
               </p>
             </div>
           </nav>
