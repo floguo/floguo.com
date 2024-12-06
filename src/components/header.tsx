@@ -19,8 +19,8 @@ export function Header() {
           
           <nav className="space-y-4">
             <div>
-              <div className="text-xs text-gray-500 mb-1">CURRENTLY</div>
-              <p className="text-sm">
+              <div className="text-xs text-gray-500 mb-3">CURRENTLY</div>
+              <p className="text-sm mb-6">
                 Running an independent design practice in Toronto.
                 <br />
                 Studying information & design at UofT's iSchool.
@@ -30,8 +30,8 @@ export function Header() {
             </div>
             
             <div>
-              <div className="text-xs text-gray-500 mb-1">PREVIOUSLY</div>
-              <p className="text-sm">
+              <div className="text-xs text-gray-500 mb-3">PREVIOUSLY</div>
+              <p className="text-sm mb-6">
                 Produced a rap video to fight brain drain.
                 <br />
                 Left Waterloo engineering to do crypto things.
@@ -41,8 +41,8 @@ export function Header() {
             </div>
             
             <div>
-              <div className="text-xs text-gray-500 mb-1">CONTACT</div>
-              <p className="text-sm">
+              <div className="text-xs text-gray-500 mb-3">CONTACT</div>
+              <p className="text-sm mb-6">
                 Have an interesting idea? Please get in touch :)
               </p>
             </div>
