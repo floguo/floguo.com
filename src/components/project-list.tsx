@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+// import { useState } from "react"
 import { ProjectStore } from "../lib/store"
 
 interface Project {
@@ -21,7 +21,7 @@ interface ProjectListProps {
 }
 
 export function ProjectList({ projects }: ProjectListProps) {
-  const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
+  // const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
   const setPreview = ProjectStore((state) => state.setPreview)
 
   return (
@@ -40,11 +40,11 @@ export function ProjectList({ projects }: ProjectListProps) {
                   key={project.title}
                   className="group cursor-pointer"
                   onMouseEnter={() => {
-                    setHoveredProject(project)
+                    // setHoveredProject(project)
                     setPreview(project)
                   }}
                   onMouseLeave={() => {
-                    setHoveredProject(null)
+                    // setHoveredProject(null)
                     setPreview(null)
                   }}
                 >

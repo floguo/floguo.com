@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Flowers from './flowers'
 // import { FlowerIcon } from './icons'
 
 export function Header() {
@@ -23,7 +24,7 @@ export function Header() {
               <p className="text-sm mb-6">
                 Running an independent design practice in Toronto.
                 <br />
-                Studying information & design at UofT's iSchool.
+                {"Studying information & design at UofT's iSchool."}
                 <br />
                 Seeking Summer 2025 design roles.
               </p>
@@ -48,6 +49,8 @@ export function Header() {
             </div>
           </nav>
         </div>
+
+        <Flowers />
 
         <nav className="space-y-1 text-sm">
           <Link href="https://twitter.com/floguo" className="block hover:underline">
