@@ -9,7 +9,7 @@ export function Header() {
         <div className="space-y-8">
           <div className="space-y-2">
             <Link href="/" className="flex items-center gap-2 text-xl">
-              <span className="text-blue-600">❋</span> FLOGUO
+              <span className="text-blue-600">❋</span> FLOGUO - SITE UNDER CONSTRUCTION
             </Link>
             <p className="text-sm">
               Independent designer
