@@ -33,7 +33,7 @@ export function ProjectList({ projects }: ProjectListProps) {
       <div className="space-y-12">
         {projects.map((yearGroup) => (
           <div key={yearGroup.year}>
-            <div className="text-xs text-gray-500 mb-4">{yearGroup.year}</div>
+            <div className="text-sm text-gray-500 mb-4">{yearGroup.year}</div>
             <div className="space-y-2">
               {yearGroup.items.map((project) => (
                 <div

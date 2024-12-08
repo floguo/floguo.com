@@ -41,9 +41,9 @@ export function ProjectPreview() {
             <div className="space-y-1 font-[family-name:var(--font-merchant-copy)]">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm">{project.title}</h3>
-                <span className="text-xs text-muted-foreground">{project.year}</span>
+                <span className="text-sm text-muted-foreground">{project.year}</span>
               </div>
-              <p className="text-xs text-muted-foreground">{project.category}</p>
+              <p className="text-sm text-muted-foreground">{project.category}</p>
             </div>
           </div>
         ))}
@@ -53,37 +53,37 @@ export function ProjectPreview() {
 
   return (
     <div className="relative h-full font-[family-name:var(--font-merchant-copy)]">
-            <AnimatePresence mode="wait">
-            <motion.div
-                key={currentImageIndex}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentImageIndex}
                 initial={false} // No initial animation
                 animate={false} // No animation on change
                 className="absolute inset-0 p-8"
             >
             <div className="space-y-4 mb-8">
-            <h2 className="text-2xl font-[family-name:var(--font-merchant-copy)]">{preview.title}</h2>
+            <h2 className="text-2xl">{preview.title}</h2>
             <p className="text-muted-foreground">{preview.description}</p>
             </div>
             <div className="relative aspect-video overflow-hidden">
             <Image
-            src={preview.images[currentImageIndex]}
-            alt={`${preview.title} preview ${currentImageIndex + 1}`}
-            fill
-            priority
-            className="object-contain"
+              src={preview.images[currentImageIndex]}
+              alt={`${preview.title} preview ${currentImageIndex + 1}`}
+              fill
+              priority
+              className="object-contain"
             />
             </div>
             <div className="mt-4 flex justify-center gap-2">
-            {preview.images.map((_, index) => (
-            <button
-            key={index}
-            className={`w-2 h-2 transition-colors ${
-                index === currentImageIndex ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-            onClick={() => setCurrentImageIndex(index)}
-            aria-label={`View image ${index + 1}`}
-            />
-            ))}
+              {preview.images.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 transition-colors ${
+                    index === currentImageIndex ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+              onClick={() => setCurrentImageIndex(index)}
+              aria-label={`View image ${index + 1}`}
+              />
+              ))}
             </div>
             </motion.div>
       </AnimatePresence>
