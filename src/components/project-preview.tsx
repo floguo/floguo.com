@@ -11,16 +11,18 @@ export function ProjectPreview() {
   const allProjects = ProjectStore((state) => state.allProjects)
 
   useEffect(() => {
-    if (!preview) {
-      setCurrentImageIndex(0)
-      return
-    }
+    // if (!preview) {
+    //   setCurrentImageIndex(0)
+    //   return
+    // }
 
     const interval = setInterval(() => {
-      setCurrentImageIndex((current) => 
-        current === preview.images.length - 1 ? 0 : current + 1
-      )
-    }, 1000) // Reduced to 1 second for faster transitions
+      setCurrentImageIndex((current) => {
+        console.log(current, allProjects);
+        if (!preview) return 0;
+        return current === preview.images.length - 1 ? 0 : current + 1
+      })
+    }, 750) 
 
     return () => clearInterval(interval)
   }, [preview])
@@ -30,9 +32,10 @@ export function ProjectPreview() {
       <div className="p-8 grid grid-cols-3 gap-4 auto-rows-min">
         {allProjects.map((project, index) => (
           <div key={index} className="space-y-2">
+
             <div className="aspect-square relative overflow-hidden">
               <Image
-                src={project.images[0]}
+                src={project.images[currentImageIndex]}
                 alt={project.title}
                 fill
                 className="object-cover"
