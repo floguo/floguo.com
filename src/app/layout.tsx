@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Crimson_Pro } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
+// import localFont from "next/font/local";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const crimsonPro = Crimson_Pro({
+  subsets: ["latin"],
+  variable: "--font-crimson-pro",
+  fallback: ["serif"],
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jet-brains-mono",
+  fallback: ["monospace"],
+  display: "swap",
 });
-const MerchantCopy = localFont({
-  src: "./fonts/MerchantCopy.woff",
-  variable: "--font-merchant-copy",
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-instrument-sans",
+  fallback: ["sans-serif"],
+  display: "swap",
 });
+
 export const metadata: Metadata = {
   title: "FLOGUO",
   description: "Independent designer in Toronto",
@@ -29,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${MerchantCopy.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${crimsonPro.variable} ${jetBrainsMono.variable} ${instrumentSans.variable} antialiased`}
       >
         {children}
       </body>

@@ -17,5 +17,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-instrument-sans), Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-crimson-pro), serif;
+  font-weight: 300;
+}
+
+.subheading {
+  font-family: var(--font-jet-brains-mono), monospace;
 }

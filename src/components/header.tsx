@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import Flowers from './flowers'
-// import { FlowerIcon } from './icons'
+import FlowerIcon from '@/app/icon'
 
 export function Header() {
   return (
@@ -8,51 +7,18 @@ export function Header() {
       <div className="flex justify-between items-start">
         <div className="space-y-8">
           <div className="space-y-2">
-            <Link href="/" className="flex items-center gap-2 text-xl">
-              <span className="text-blue-600">❋</span> FLOGUO - SITE UNDER CONSTRUCTION
+            <Link href="/" className="flex items-center gap-2 text-xl mb-8">
+              <span><FlowerIcon /></span>floguo
             </Link>
-            <p className="text-sm">
+            <h1 className="text-3xl leading-none">
               Independent designer
               <br />
               pursuing play with pixels.
-            </p>
+            </h1>
           </div>
-          
-          <nav className="space-y-4">
-            <div>
-              <div className="text-xs text-gray-500 mb-3">CURRENTLY</div>
-              <p className="text-sm mb-6">
-                Running an independent design practice in Toronto.
-                <br />
-                {"Studying information & design at UofT's iSchool."}
-                <br />
-                Seeking Summer 2025 design roles.
-              </p>
-            </div>
-            
-            <div>
-              <div className="text-xs text-gray-500 mb-3">PREVIOUSLY</div>
-              <p className="text-sm mb-6">
-                Produced a rap video to fight brain drain.
-                <br />
-                Left Waterloo engineering to do crypto things.
-                <br />
-                Designed dashboards for COVID-19 serology data.
-              </p>
-            </div>
-            
-            <div>
-              <div className="text-xs text-gray-500 mb-3">CONTACT</div>
-              <p className="text-sm mb-6">
-                Have an interesting idea? Please get in touch :)
-              </p>
-            </div>
-          </nav>
         </div>
 
-        <Flowers />
-
-        <nav className="space-y-1 text-sm">
+        <nav className="subheading space-y-1 text-sm">
           <Link href="https://twitter.com/floguo" className="block hover:underline">
             X (TWITTER)
           </Link>
