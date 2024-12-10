@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F8F5F3;
   --foreground: #171717;
+  --accent: #0026EF;
+  --accent-light: #FFCFAF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #F8F5F3;
   }
 }
 
@@ -27,4 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .subheading {
   font-family: var(--font-jet-brains-mono), monospace;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--accent);
 }

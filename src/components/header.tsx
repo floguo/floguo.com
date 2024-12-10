@@ -10,7 +10,7 @@ export function Header() {
             <Link href="/" className="flex items-center gap-2 text-xl mb-8">
               <span><FlowerIcon /></span>floguo
             </Link>
-            <h1 className="text-3xl leading-none">
+            <h1 className="text-5xl leading-none">
               Independent designer
               <br />
               pursuing play with pixels.
