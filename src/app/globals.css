@@ -7,6 +7,7 @@
   --foreground: #171717;
   --accent: #0026EF;
   --accent-light: #FFCFAF;
+  --btq: #0B3EF9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +23,7 @@ body {
   font-family: var(--font-instrument-sans), Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-crimson-pro), serif;
   font-weight: 300;
 }

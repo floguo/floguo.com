@@ -27,7 +27,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "FLOGUO",
+  title: "floguo",
   description: "Independent designer in Toronto",
 };
 
