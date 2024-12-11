@@ -126,7 +126,7 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
             onClick={() => setActiveIndex(index)}
           >
             <MediaSlideshow media={project.media} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent via-black/50 p-2 flex flex-col justify-end">
+            <div className={`absolute inset-0 bg-gradient-to-t from-black to-transparent via-black/50 p-2 flex flex-col justify-end transition-opacity duration-300 ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}>
               <h2 className="text-sm font-medium text-white">{project.title}</h2>
               <div className="flex flex-wrap gap-1 mt-1">
                 {project.tags.slice(0, 2).map((tag) => (
@@ -152,38 +152,39 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
             return (
               <motion.article
                 key={project.id}
-                className={`relative flex-shrink-0 cursor-pointer overflow-hidden mx-2`}
+                className={`relative flex-shrink-0 cursor-pointer overflow-hidden mx-2 rounded-2xl`}
                 initial={false}
                 animate={{
-                  width: isActive ? 'calc(50% - 16px)' : 'calc(25% - 16px)',
-                  height: isActive ? '100%' : '50%',
-                  opacity: isActive ? 1 : 1,
+                  width: isActive ? 'calc(45% - 16px)' : 'calc(25% - 16px)',
+                  height: isActive ? 'calc(100%)' : '52%',
+                  opacity: 1,
                 }}
                 transition={{
-                  width: { type: 'spring', stiffness: 300, damping: 30 },
+                  width: { type: 'spring', stiffness: 150, damping: 30 },
+                  height: { type: 'spring', stiffness: 150, damping: 30 },
                   opacity: { duration: 0.2 },
                 }}
               >
                 <MediaSlideshow media={project.media} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent via-black/20 p-2 flex flex-col justify-end">
-                <AnimatePresence>
-                  {isActive && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 20 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute bottom-4 left-4 right-4"
-                    >
-                      <h2 className="px-2 mb-2 text-3xl text-white">{project.title}</h2>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="subheading bg-black bg-opacity-40 px-2 py-1 rounded-md text-sm text-white">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </motion.div>
+                <div className={`absolute inset-0 bg-gradient-to-t from-black to-transparent via-black/20 p-2 flex flex-col justify-end transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute bottom-4 left-4 right-4"
+                      >
+                        <h2 className="px-2 mb-2 text-3xl text-white">{project.title}</h2>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tags.map((tag) => (
+                            <span key={tag} className="subheading bg-black bg-opacity-40 px-2 py-1 rounded-md text-sm text-white">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </motion.div>
                     )}
                   </AnimatePresence>
                 </div>

@@ -30,12 +30,11 @@ const projects: Project[] = [
         src: '/images/optimized/valour_3.webp'
       }
     ],
-    //backgroundColor: 'bg-emerald-950'
   },
   {
     id: 2,
     title: 'BTQ Technologies',
-    tags: ['CREATIVE DIRECTION', 'WEB', 'PRODUCT'],
+    tags: ['BRAND', 'WEB', 'ILLUSTRATION'],
     media: [
       {
         type: 'image',
@@ -54,7 +53,29 @@ const projects: Project[] = [
         src: '/images/optimized/btq_4.webp'
       }
     ],
-    //backgroundColor: 'bg-blue-700'
+  },
+  {
+    id: 3,
+    title: 'Infera Network',
+    tags: ['BRAND', 'WEB', 'PRODUCT'],
+    media: [
+      {
+        type: 'image',
+        src: '/images/optimized/infera_2.webp'
+      },
+      {
+        type: 'image',
+        src: '/images/optimized/infera_3.webp'
+      },
+      {
+        type: 'image',
+        src: '/images/optimized/infera_4.webp'
+      },
+      {
+        type: 'image',
+        src: '/images/optimized/infera_5.webp'
+      }
+    ],
   }
 ]
 

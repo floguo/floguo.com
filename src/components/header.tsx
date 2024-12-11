@@ -8,7 +8,7 @@ export function Header() {
         <div className="space-y-8">
           <div className="space-y-2">
             <Link href="/" className="flex items-center gap-2 text-xl mb-8">
-              <span><FlowerIcon /></span>floguo
+              <span><FlowerIcon /></span>floguo : site under construction
             </Link>
             <h1 className="text-5xl leading-none">
               Independent designer
@@ -33,10 +33,6 @@ export function Header() {
           </Link>
         </nav>
       </div>
-
-      {/* <div className="mt-8">
-        <FlowerIcon className="w-48 h-auto" />
-      </div> */}
     </header>
   )
 }
