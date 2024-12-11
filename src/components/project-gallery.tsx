@@ -47,16 +47,6 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null)
 
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
-    setIsAutoPlaying(false)
-  }
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length)
-    setIsAutoPlaying(false)
-  }
-
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
@@ -103,7 +93,7 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length)
-      }, 5000)
+      }, 6000)
     } else if (autoPlayRef.current) {
       clearInterval(autoPlayRef.current)
     }
@@ -155,7 +145,7 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
                 className={`relative flex-shrink-0 cursor-pointer overflow-hidden mx-2 rounded-2xl`}
                 initial={false}
                 animate={{
-                  width: isActive ? 'calc(45% - 16px)' : 'calc(25% - 16px)',
+                  width: isActive ? 'calc(50% - 16px)' : 'calc(25% - 16px)',
                   height: isActive ? 'auto' : '100%',
                   opacity: 1,
                 }}

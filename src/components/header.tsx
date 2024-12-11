@@ -1,26 +1,24 @@
 import Link from 'next/link'
-import FlowerIcon from '@/app/icon'
+import FlowerIcon from '@/app/flower-icon'
 
 export function Header() {
   return (
     <header className="p-8 font-[family-name:var(--font-merchant-copy)]">
       <div className="flex justify-between items-start">
         <div className="space-y-8">
-          <div className="space-y-2">
-            <Link href="/" className="flex items-center gap-2 text-xl mb-8">
-              <span><FlowerIcon /></span>floguo : site under construction
+            <Link href="/" className="flex items-center gap-2 text-xl mb-12">
+              <span> <FlowerIcon /> </span>floguo : site under construction
             </Link>
             <h1 className="text-5xl leading-none">
               Independent designer
               <br />
               pursuing play with pixels.
             </h1>
-          </div>
         </div>
 
         <nav className="subheading space-y-1 text-sm">
           <Link href="https://twitter.com/floguo" className="block hover:underline">
-            X (TWITTER)
+            TWITTER
           </Link>
           <Link href="mailto:hello@floguo.com" className="block hover:underline">
             EMAIL

@@ -1,8 +1,12 @@
 import { useEffect, useRef } from 'react'
 import anime from 'animejs'
 
+type FlowersProps = {
+    className?: string
+}
 
-export default function Flowers() {
+
+export default function Flowers({ className }: FlowersProps) {
     const elementRef = useRef<SVGSVGElement>(null)
 
     useEffect(() => {
@@ -31,8 +35,9 @@ export default function Flowers() {
     }, [])
 
     return (
-        <div className="flowers">
+        <div className="flowers w-full h-full">
             <svg
+                className={className}
                 ref={elementRef}
                 width="251"
                 height="162"

@@ -1,15 +1,10 @@
 "use client"
 
 import { Header } from '@/components/header'
-import { useEffect } from 'react'
-import { ProjectStore } from '@/lib/store'
 import { Project } from '@/types/project'
 import { ProjectGallery } from '@/components/project-gallery'
+import { Footer } from '@/components/footer'
 import '@/app/globals.css'
-
-function getOptimizedImagePaths(project: string, numberImages: number) {
-  return Array.from({length: numberImages}, (_, i) => `/images/optimized/${project}_${i + 1}.webp`)
-}
 
 const projects: Project[] = [
   {
@@ -90,6 +85,7 @@ export default function Home() {
       <main className="pt-24">
         <ProjectGallery projects={projects} />
       </main>
+      <Footer />
     </div>
   )
 }
