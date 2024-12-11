@@ -156,7 +156,7 @@ export function ProjectGallery({ projects }: ProjectGalleryProps) {
                 initial={false}
                 animate={{
                   width: isActive ? 'calc(45% - 16px)' : 'calc(25% - 16px)',
-                  height: isActive ? 'calc(100%)' : '52%',
+                  height: isActive ? 'auto' : '100%',
                   opacity: 1,
                 }}
                 transition={{

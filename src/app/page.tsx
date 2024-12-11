@@ -23,11 +23,15 @@ const projects: Project[] = [
       },
       {
         type: 'image',
-        src: '/images/optimized/valour_2.webp'
+        src: '/images/optimized/valour_7.webp'
       },
       {
         type: 'image',
         src: '/images/optimized/valour_3.webp'
+      },
+      {
+        type: 'image',
+        src: '/images/optimized/valour_6.webp'
       }
     ],
   },
